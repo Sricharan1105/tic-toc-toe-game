@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/game.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Login Screen -->
+      <div id="login-screen" class="screen active">
+        <div class="login-container">
+          <div class="logo-container">
+            <h1 class="game-title">Tic Tac Toe</h1>
+          </div>
+          <form id="login-form" class="login-form">
+            <div class="form-group">
+              <label for="player1">Player X</label>
+              <input type="text" id="player1" name="player1" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+              <label for="player2">Player O</label>
+              <input type="text" id="player2" name="player2" placeholder="Enter name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Game</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div id="game-screen" class="screen">
+        <div class="game-container">
+          <div class="game-header">
+            <h2 class="game-status">Game in progress</h2>
+            <div class="player-info">
+              <div id="player-x" class="player active">
+                <span class="player-label">Player X</span>
+                <span id="player-x-name" class="player-name">Player 1</span>
+                <span id="player-x-score" class="player-score">0</span>
+              </div>
+              <div id="player-o" class="player">
+                <span class="player-label">Player O</span>
+                <span id="player-o-name" class="player-name">Player 2</span>
+                <span id="player-o-score" class="player-score">0</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="board-container">
+            <div id="board" class="board">
+              <div class="cell" data-index="0"></div>
+              <div class="cell" data-index="1"></div>
+              <div class="cell" data-index="2"></div>
+              <div class="cell" data-index="3"></div>
+              <div class="cell" data-index="4"></div>
+              <div class="cell" data-index="5"></div>
+              <div class="cell" data-index="6"></div>
+              <div class="cell" data-index="7"></div>
+              <div class="cell" data-index="8"></div>
+            </div>
+          </div>
+          
+          <div class="game-controls">
+            <button id="reset-game" class="btn btn-secondary">Reset Game</button>
+            <button id="new-game" class="btn btn-primary">New Game</button>
+            <button id="logout" class="btn btn-outline">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
